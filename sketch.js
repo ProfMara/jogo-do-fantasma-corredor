@@ -54,9 +54,10 @@ function draw() {
         player.changeAnimation("player parado");
 
         //código para controlar o jogador para cima
-        if (keyDown("space")) {
+        if (keyDown("space") || touches.length>0) {
             player.velocityY = -10;
             player.changeAnimation("player pulando");
+            touches = [];
         }
 
         //código para controlar o jogador para Esquerda
